@@ -1,3 +1,4 @@
+<?php include("./includes/secrets.php") ?>
 <?php
 /* Redirects here after login */
 $redirect_after_login = 'index.php';
@@ -11,11 +12,8 @@ if (isset($_POST['password']) && $_POST['password'] == $password) {
     exit;
 }
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Password protected</title>
+<?php include("./includes/header.php") ?>
+<title>Gambee - Login</title>
 </head>
 
 <body>
