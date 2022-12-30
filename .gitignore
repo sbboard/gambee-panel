@@ -1,4 +1,4 @@
 node_modules
-secrets.php
+*secrets.php
 old
 dummy*
