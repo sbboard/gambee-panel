@@ -17,7 +17,7 @@ foreach ($obj as $key => $value) {
     }
 }
 ?>
-<title>Gambee - <?php echo $comic_title ?></title>
+<title>Gambee - Editing <?php echo $comic_title ?></title>
 </head>
 
 <body>
