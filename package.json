@@ -1,0 +1,23 @@
+{
+  "name": "gf_gambee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lws",
+    "sass": "sass --watch css/style.sass:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbboard/gambee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbboard/gambee/issues"
+  },
+  "homepage": "https://github.com/sbboard/gambee#readme",
+  "devDependencies": {
+    "light-web-server": "^1.3.0"
+  }
+}

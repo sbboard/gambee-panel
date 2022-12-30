@@ -1,0 +1,25 @@
+{
+  "comics": [
+    {
+      "title": "hello",
+      "date": "10/10/10",
+      "pages": [".jpg", ".jpg", ".jpg"],
+      "thumbnail": ".jpg",
+      "series": "pheno"
+    },
+    {
+      "title": "hello 2",
+      "date": "10/10/25",
+      "pages": [".jpg", ".jpg", ".jpg"],
+      "thumbnail": ".jpg",
+      "series": "pheno"
+    },
+    {
+      "title": "hello 3",
+      "date": "10/10/10",
+      "pages": [".jpg", ".jpg", ".jpg"],
+      "thumbnail": ".jpg",
+      "series": "pheno"
+    }
+  ]
+}
