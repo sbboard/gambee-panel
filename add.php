@@ -18,12 +18,16 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
 </head>
 
 <body>
-    <h1>Add Comic
-    </h1>
+    <h1>Add Comic</h1>
     <form action="" method="post" enctype="multipart/form-data">
         <label>Title*</label>
         <input name="title" required>
-        <?php echo '<label>Series: </label><select>' . $seriesOptions . '</select>'; ?>
+        <?php
+        echo '<label>Series: </label><select onchange="changeValue(event)">' . $seriesOptions . '</select>';
+        ?>
+        <div id="newSeriesWrap" hidden>
+            <label>New Series Title</label> <input id='newSeries' />
+        </div>
         <label>Thumbnail*</label>
         <input type='file' name='img' accept="image/*">
         <div id="uploadBox">
@@ -34,5 +38,11 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
         <input type="submit">
     </form>
 </body>
+
+<script>
+    function changeValue(e) {
+        document.querySelector("#newSeriesWrap").hidden = e.target.value != "newseries"
+    }
+</script>
 
 </html>
