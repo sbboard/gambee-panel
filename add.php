@@ -18,7 +18,7 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
 </head>
 
 <body>
-    <h1>Add Comic</h1>
+    <h1><a onclick="goHome()">Home</a> / Add Comic</h1>
     <form action="" method="post" enctype="multipart/form-data">
         <label>Title*</label>
         <input name="title" required>
@@ -42,6 +42,12 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
 <script>
     function changeValue(e) {
         document.querySelector("#newSeriesWrap").hidden = e.target.value != "newseries"
+    }
+
+    function goHome() {
+        if (confirm("Go Home? Any unsaved progress will be lost.")) {
+            window.location.href = './'
+        }
     }
 </script>
 

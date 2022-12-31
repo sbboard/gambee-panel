@@ -33,7 +33,7 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
 
 <body>
     <h1>
-        <?php echo $comic_title ?>
+        <a onclick="goHome()">Home</a> / <?php echo $comic_title ?>
     </h1>
     <form action="" method="post" enctype="multipart/form-data">
         <?php
@@ -63,6 +63,12 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
             if (confirm("Are you REALLY sure you want to delete <?php echo $comic_title ?>?")) {
                 console.log("fck")
             }
+        }
+    }
+
+    function goHome() {
+        if (confirm("Go Home? Any unsaved progress will be lost.")) {
+            window.location.href = './'
         }
     }
 
