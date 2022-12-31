@@ -6,18 +6,24 @@ $appliedSeries = ["noseries"];
 $seriesOptions = "<option value='noseries'></option>";
 
 foreach ($obj as $key => $value) {
-    if (!in_array($value->series, $appliedSeries)) {
-        array_push($appliedSeries, $value->series);
-        $seriesOptions .= "<option>";
-        $seriesOptions .= $value->series;
-        $seriesOptions .= "</option>";
-    }
     if ($value->_id == $comic_id) {
         $comic_title = $value->title;
         $comic_date = $value->date;
         $comic_pages = $value->date;
         $comic_thumbnail = $value->thumbnail;
-        $comic_series = $value->date;
+        $comic_series = $value->series;
+    }
+}
+foreach ($obj as $key => $value) {
+    if (!in_array($value->series, $appliedSeries)) {
+        array_push($appliedSeries, $value->series);
+        $seriesOptions .= "<option";
+        if ($value->series == $comic_series) {
+            $seriesOptions .= " selected";
+        }
+        $seriesOptions .= ">";
+        $seriesOptions .= $value->series;
+        $seriesOptions .= "</option>";
     }
 }
 $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series</option>";
