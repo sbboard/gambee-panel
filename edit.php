@@ -50,11 +50,20 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
         ?>
         <input type="submit">
     </form>
+    <button onclick="deleteFunction()">Delete</button>
 </body>
 
 <script>
     function changeValue() {
         document.querySelector("#newSeriesWrap").hidden = document.querySelector("#series select").value != "newseries"
+    }
+
+    function deleteFunction() {
+        if (confirm("Are you sure you want to delete <?php echo $comic_title ?>")) {
+            if (confirm("Are you REALLY sure you want to delete <?php echo $comic_title ?>?")) {
+                console.log("fck")
+            }
+        }
     }
 
 </script>
