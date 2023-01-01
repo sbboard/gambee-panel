@@ -1,6 +1,4 @@
 <?php include("./includes/header.php");
-$json = file_get_contents("./dummy.json");
-$obj = json_decode($json);
 $comic_id = $_GET['comic'];
 $appliedSeries = ["noseries"];
 $seriesOptions = "";

@@ -1,6 +1,4 @@
 <?php include("./includes/header.php");
-$json = file_get_contents("./dummy.json");
-$obj = json_decode($json);
 $appliedSeries = ["noseries"];
 $seriesOptions = "<option value='noseries'></option>";
 

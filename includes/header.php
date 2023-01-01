@@ -17,6 +17,8 @@ $json = json_encode($emparray);
 
 //close the db connection
 mysqli_close($connection);
+
+$obj = json_decode($json);
 ?>
 <!DOCTYPE html>
 <html>
