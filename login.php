@@ -1,19 +1,23 @@
 <?php include("./includes/secrets.php") ?>
 <?php
 /* Redirects here after login */
-$redirect_after_login = 'index.php';
+$redirect_after_login = './index.php';
 
 /* Will not ask password again for */
 $remember_password = strtotime('+30 days'); // 30 days
 
 if (isset($_POST['password']) && $_POST['password'] == $password) {
-    setcookie("password", $password, $remember_password);
+    setcookie("gambee_password", $password, $remember_password);
     header('Location: ' . $redirect_after_login);
     exit;
 }
 ?>
-<?php include("./includes/header.php") ?>
-<title>Gambee - Login</title>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Gambee - Login</title>
 </head>
 
 <body>
