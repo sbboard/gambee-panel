@@ -2,12 +2,21 @@
 include("./includes/secrets.php");
 require_once('protect.php');
 
-$conn = new mysqli($sql_servername, $sql_username, $sql_password);
+$connection = mysqli_connect($sql_servername, $sql_username, $sql_password, "josuecru_gambee") or die("Error " . mysqli_error($connection));
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$sql = "select * from comics";
+$result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
+
+//create an array
+$emparray = array();
+while ($row = mysqli_fetch_assoc($result)) {
+    $emparray[] = $row;
 }
-echo "Connected successfully";
+
+$json = json_encode($emparray);
+
+//close the db connection
+mysqli_close($connection);
 ?>
 <!DOCTYPE html>
 <html>

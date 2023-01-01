@@ -13,6 +13,8 @@ foreach ($obj as $key => $value) {
     }
 }
 $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series</option>";
+
+//INSERT INTO `comics` (`title`, `date`, `pages`, `thumbnail`, `series`, `_id`) VALUES ('comic 1', '2001-03-15', '[\"https://gang-fight.com/assets/comics/CactusCityOasis/1.png\"]', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToAfsPC5qBsqMS4AzAd8Dfvrlbq-gHA7Kn47_jbk4MvmGZWvhV-VkTo7xA-rp2Iq4aXYk&usqp=CAU', 'pheno', '1');
 ?>
 <title>Gambee - Add Comic</title>
 </head>

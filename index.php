@@ -1,5 +1,5 @@
 <?php include("./includes/header.php");
-$json = file_get_contents("./dummy.json");
+//$json = file_get_contents("./dummy.json");
 $obj = json_decode($json);
 usort($obj, function ($a, $b) {
     return strcmp($a->date, $b->date);
