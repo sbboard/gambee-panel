@@ -15,25 +15,25 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
 <title>Gambee - Add Comic</title>
 </head>
 
-<body>
+<body class="container">
     <h1><a onclick="goHome()">Home</a> / Add Comic</h1>
     <form action="./addScript.php" method="post" enctype="multipart/form-data">
-        <label>Title*</label>
-        <input name="title" required>
+        <label class="form-label">Title*</label>
+        <input name="title" class="form-control" required>
         <?php
-        echo '<label>Series: </label><select onchange="changeValue(event)">' . $seriesOptions . '</select>';
+        echo '<label class="form-label">Series: </label><select class="form-control" onchange="changeValue(event)">' . $seriesOptions . '</select>';
         ?>
         <div id="newSeriesWrap" hidden>
-            <label>New Series Title</label> <input id='newSeries' />
+            <label class="form-label">New Series Title</label> <input id='newSeries' />
         </div>
-        <label>Thumbnail*</label>
-        <input type='file' name='img' accept="image/*">
+        <label class="form-label">Thumbnail*</label>
+        <input class="form-control" type='file' name='img' accept="image/*">
         <div id="uploadBox">
-            <label>Upload Pages</label>
-            <input name="pages" type="file" multiple="multiple" accept="image/*" />
+            <label class="form-label">Upload Pages</label>
+            <input class="form-control" name="pages" type="file" multiple="multiple" accept="image/*" />
         </div>
 
-        <input type="submit">
+        <input type="submit" class="btn btn-primary">
     </form>
 </body>
 

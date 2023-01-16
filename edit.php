@@ -29,7 +29,7 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
 <title>Gambee - Editing <?php echo $comic_title ?></title>
 </head>
 
-<body>
+<body class="container">
     <h1>
         <a onclick="goHome()">Home</a> / <?php echo $comic_title ?>
     </h1>
@@ -37,18 +37,18 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
         <?php
         foreach ($obj as $key => $value) {
             if ($value->_id == $comic_id) {
-                echo "<div id='title'><label>Title: </label><input value='" . $comic_title . "'></input></div>";
-                echo "<div id='date'><label>Date: </label><input type='date' value='" . $comic_date . "'></input></div>";
-                echo '<div id="series"><label>Series: </label><select onchange="changeValue(event)">' . $seriesOptions . '</select></div>';
-                echo '<div id="newSeriesWrap" hidden><label>New Series Title</label> <input id="newSeries" /></div>';
-                echo "<div id='thumb'><label>Thumbnail: </label><img src='" . $comic_thumbnail . "'></div>";
-                echo "<div id='pages'><label>Pages: </label>" . $comic_pages . "</div>";
+                echo "<div id='title'><label class='form-label'>Title: </label><input class='form-control' value='" . $comic_title . "'></input></div>";
+                echo "<div id='date'><label class'form-label'>Date: </label><input class='form-control' type='date' value='" . $comic_date . "'></input></div>";
+                echo '<div id="series"><label class="form-label">Series: </label><select class="form-control" onchange="changeValue(event)">' . $seriesOptions . '</select></div>';
+                echo '<div id="newSeriesWrap" hidden><label class="form-label">New Series Title</label> <input class="form-control" id="newSeries" /></div>';
+                echo "<div id='thumb'><label class='form-label'>Thumbnail: </label><img src='" . $comic_thumbnail . "'></div>";
+                echo "<div id='pages'><label class='form-label'>Pages: </label>" . $comic_pages . "</div>";
             }
         }
         ?>
-        <input type="submit">
+        <input type="submit" class="btn btn-primary">
+        <button class="btn btn-danger" onclick="deleteFunction()">Delete</button>
     </form>
-    <button onclick="deleteFunction()">Delete</button>
 </body>
 
 <script>
