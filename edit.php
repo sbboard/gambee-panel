@@ -41,7 +41,7 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
                 echo "<div id='date'><label class'form-label'>Date: </label><input class='form-control' type='date' value='" . $comic_date . "'></input></div>";
                 echo '<div id="series"><label class="form-label">Series: </label><select class="form-control" onchange="changeValue(event)">' . $seriesOptions . '</select></div>';
                 echo '<div id="newSeriesWrap" hidden><label class="form-label">New Series Title</label> <input class="form-control" id="newSeries" /></div>';
-                echo "<div id='thumb'><label class='form-label'>Thumbnail: </label><img src='" . $comic_thumbnail . "'></div>";
+                echo "<div id='thumb'><label class='form-label'>Thumbnail: </label><br/><img src='" . $comic_thumbnail . "'></div>";
                 echo "<div id='pages'><label class='form-label'>Pages: </label>" . $comic_pages . "</div>";
             }
         }

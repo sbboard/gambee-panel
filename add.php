@@ -27,10 +27,10 @@ $seriesOptions .= "<option class='newSeriesOption' value='newseries'>new series<
             <label class="form-label">New Series Title</label> <input id='newSeries' />
         </div>
         <label class="form-label">Thumbnail*</label>
-        <input class="form-control" type='file' name='img' accept="image/*">
+        <input type='file' name='img' accept="image/*">
         <div id="uploadBox">
             <label class="form-label">Upload Pages</label>
-            <input class="form-control" name="pages" type="file" multiple="multiple" accept="image/*" />
+            <input name="pages" type="file" multiple="multiple" accept="image/*" />
         </div>
 
         <input type="submit" class="btn btn-primary">
